@@ -145,7 +145,7 @@ Trigger quality (Unit 2) determines whether installs become sustained usage
 
 ## Implementation Units
 
-- [ ] **Unit 1: Cut v3.0.1 GitHub release with `.skill` asset + auto-build CI**
+- [x] **Unit 1: Cut v3.0.1 GitHub release with `.skill` asset + auto-build CI**
 
 **Goal:** Produce a stable public download URL for `last30days.skill` so every downstream lever has something to link to, and guarantee future releases include the artifact automatically.
 
@@ -177,7 +177,7 @@ Trigger quality (Unit 2) determines whether installs become sustained usage
 - Downloaded file matches `dist/last30days.skill` byte-for-byte
 - A second tag (e.g., `v3.0.2-test`) in a branch triggers the workflow end-to-end
 
-- [ ] **Unit 2: Tune SKILL.md description and argument-hint for trigger quality**
+- [x] **Unit 2: Tune SKILL.md description and argument-hint for trigger quality**
 
 **Goal:** Increase the probability that Claude's skill-selector invokes `last30days` on research-intent prompts. Trigger quality is the single biggest install-to-reuse lever per ecosystem research.
 
@@ -214,7 +214,7 @@ argument-hint: 'last30days AI video tools | last30days nvidia earnings reaction 
 - At least 3 real-user prompt phrasings trigger skill selection in manual testing
 - No regression on zero-config first-run (no new API keys required)
 
-- [ ] **Unit 3: Rewrite the README claude.ai section with one-click install**
+- [x] **Unit 3: Rewrite the README claude.ai section with one-click install**
 
 **Goal:** Replace the current "run this bash script" instructions with a one-click download link pointing at the GitHub release asset.
 
@@ -238,7 +238,7 @@ argument-hint: 'last30days AI video tools | last30days nvidia earnings reaction 
 - A user following the README instructions end-to-end can go from "never heard of this" to working skill in under 60 seconds
 - Instructions specify the exact claude.ai UI path current as of the release date
 
-- [ ] **Unit 4: Cross-link existing distribution surfaces back to claude.ai**
+- [x] **Unit 4: Cross-link existing distribution surfaces back to claude.ai** (in-repo README matrix shipped; external ClawHub/Gemini listing edits remain)
 
 **Goal:** Convert existing Claude Code plugin / OpenClaw / Gemini traffic into claude.ai installs. Cheaper than net-new acquisition.
 
