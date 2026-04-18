@@ -76,12 +76,7 @@ if [ -d "$HOME/.hermes/skills/research" ]; then
   echo "--- Syncing to Hermes ---"
   mkdir -p "$HERMES_TARGET/scripts/lib"
   
-  # Use Hermes-specific SKILL.md if available, fallback to main
-  if [ -f "$SRC/.hermes-plugin/SKILL.md" ]; then
-    cp "$SRC/.hermes-plugin/SKILL.md" "$HERMES_TARGET/SKILL.md"
-  else
-    cp "$SRC/SKILL.md" "$HERMES_TARGET/SKILL.md"
-  fi
+  cp "$SRC/SKILL.md" "$HERMES_TARGET/SKILL.md"
   
   rsync -a \
     "$SRC/scripts/last30days.py" \

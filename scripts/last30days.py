@@ -290,6 +290,13 @@ def main() -> int:
         parser.print_usage(sys.stderr)
         return 2
 
+    if not os.environ.get("LAST30DAYS_SKIP_PREFLIGHT"):
+        from lib import preflight
+        refuse_msg = preflight.check_class_1_trap(topic)
+        if refuse_msg:
+            sys.stderr.write(refuse_msg)
+            return 2
+
     progress = ui.ProgressDisplay(topic, show_banner=True)
     progress.start_processing()
 
